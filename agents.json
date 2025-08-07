@@ -65,6 +65,13 @@
             "udfs": [
                 "get_stock_details"
             ]
+        },
+        {
+            "name": "tree_demo_agent",
+            "udfs": [
+                "tree_height_stats_from_lat_lon",
+                "internet_speeds_for_lat_lon"
+            ]
         }
     ]
 }

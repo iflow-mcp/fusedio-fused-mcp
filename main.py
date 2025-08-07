@@ -56,7 +56,8 @@ def main():
         "--commit",
         type=str,
         # Defaulting to always main for udfs repo to use latest code for common-mcp
-        default=os.environ.get("COMMIT", "main"),
+        # default=os.environ.get("COMMIT", "main"),
+        default = "8facda3",
         help="common-mcp commit used for run_server",
     )
     args = parser.parse_args()

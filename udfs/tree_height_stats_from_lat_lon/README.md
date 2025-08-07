@@ -4,13 +4,13 @@
 ## Get started
 ```python
 # Import UDFs
-from udf_internet_speeds_for_lat_lon import internet_speeds_for_lat_lon
+from udf_tree_height_stats_from_lat_lon import tree_height_stats_from_lat_lon
 
 # Instantiate individual jobs
-job_internet_speeds_for_lat_lon = internet_speeds_for_lat_lon(lon, lat=37.7749)
+job_tree_height_stats_from_lat_lon = tree_height_stats_from_lat_lon(lon, lat=49.2426)
 
 # Instantiate multi-step job
-job = fused.experimental.job([job_internet_speeds_for_lat_lon])
+job = fused.experimental.job([job_tree_height_stats_from_lat_lon])
 
 # Run locally
 job.run_local(file_id=0, chunk_id=0)

@@ -1,10 +1,7 @@
 import fused
-from fused.models.udf import Header
-from fused.models import Schema
 
 @fused.udf
-def ookla_internet_speed(bounds: fused.types.Bounds=None, lat: float=37.7749, lon: float=-122.4194):
-
+def udf(lat: float=37.7749, lon: float=-122.4194):
     file_path='s3://ookla-open-data/parquet/performance/type=mobile/year=2024/quarter=3/2024-07-01_performance_mobile_tiles.parquet'
 
     # Load pinned versions of utility functions.
@@ -16,16 +13,10 @@ def ookla_internet_speed(bounds: fused.types.Bounds=None, lat: float=37.7749, lo
         lat = 37.7749
         lon = -122.4194
 
-    # Check if we're using point query or bounds
-    if lat is not None and lon is not None:
-        # Create a small bounding box around the input lat/lon
-        buffer = 0.01  # ~1km at equator
-        total_bounds = [lon - buffer, lat - buffer, lon + buffer, lat + buffer]
-        using_point_query = True
-    else:
-        # Use the provided bounds
-        total_bounds = bounds.total_bounds
-        using_point_query = False
+    # Create a small bounding box around the input lat/lon
+    buffer = 0.01  # ~1km at equator
+    total_bounds = [lon - buffer, lat - buffer, lon + buffer, lat + buffer]
+    using_point_query = True
 
     @fused.cache
     def get_data(total_bounds, file_path, h3_size):
@@ -73,8 +64,6 @@ def ookla_internet_speed(bounds: fused.types.Bounds=None, lat: float=37.7749, lo
 
                 if not point_speed.empty:
                     print(f"Speed at location ({lat}, {lon}): {point_speed['metric'].iloc[0]} kbps")
-                    point_speed.rename(columns={'metric': 'internet_speed_kbs'}, inplace=True)
-                    print(f"{point_speed=}")
                     return point_speed
                 else:
                     print(f"No exact match found for location ({lat}, {lon}). Returning all cells in area.")
