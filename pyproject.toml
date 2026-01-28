@@ -1,5 +1,5 @@
 [project]
-name = "fused-mcp"
+name = "iflow-mcp_fusedio_fused-mcp"
 version = "0.1.0"
 description = "Fused MCP: Setting up MCP Servers for Data Scientists"
 readme = "README.md"
@@ -11,6 +11,9 @@ dependencies = [
     "mcp[cli]>=1.4.1",
     "python-dotenv>=1.0.1",
 ]
+
+[project.scripts]
+iflow-mcp-fusedio-fused-mcp = "main:main"
 
 [tool.setuptools]
 packages = ['udfs']
