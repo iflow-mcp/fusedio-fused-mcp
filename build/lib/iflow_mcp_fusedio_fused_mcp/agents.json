@@ -1,0 +1,77 @@
+{
+    "agents": [
+        {
+            "name": "get_current_time",
+            "udfs": [
+                "current_utc_time"
+            ]
+        },
+        {
+            "name": "fused_docs",
+            "udfs": [
+                "list_public_udfs",
+                "reading_fused_docs"
+            ]
+        },
+        {
+            "name": "vancouver_open_data",
+            "udfs": [
+                "hundred_parks_in_vancouver",
+                "internet_speeds_for_lat_lon"
+            ]
+        },
+        {
+            "name": "elevation_stats_for_lat_lon_area",
+            "udfs": [
+                "elevation_stats"
+            ]
+        },
+        {
+            "name": "dynamic_output_vector",
+            "udfs": [
+                "dynamic_output_vector_udf"
+            ]
+        },
+        {
+            "name": "vancouver_open_data_demo",
+            "udfs": [
+                "hundred_parks_in_vancouver",
+                "electric_vehicle_chargers_in_vancouver",
+                "yearly_crime_amount",
+                "internet_speeds_for_lat_lon",
+                "community_gardens_vancouver"
+            ]
+        },
+        {
+            "name": "world_countries_info",
+            "udfs": [
+                "get_country_data"
+            ]
+        },
+        {
+            "name": "routing_agent",
+            "udfs": [
+                "single_routing_agent"
+            ]
+        },
+        {
+            "name": "tourism_info",
+            "udfs": [
+                "retrieve_visitor_data"
+            ]
+        },
+        {
+            "name": "stock_information",
+            "udfs": [
+                "get_stock_details"
+            ]
+        },
+        {
+            "name": "tree_demo_agent",
+            "udfs": [
+                "tree_height_stats_from_lat_lon",
+                "internet_speeds_for_lat_lon"
+            ]
+        }
+    ]
+}

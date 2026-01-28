@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "iflow-mcp_fusedio_fused-mcp"
-version = "0.1.1"
+version = "0.1.2"
 description = "Fused MCP: Setting up MCP Servers for Data Scientists"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -17,10 +17,16 @@ dependencies = [
 ]
 
 [project.scripts]
-iflow-mcp-fusedio-fused-mcp = "main:main"
+iflow-mcp-fusedio-fused-mcp = "iflow_mcp_fusedio_fused_mcp.main:main"
 
 [tool.setuptools]
-packages = ["udfs"]
+packages = ["iflow_mcp_fusedio_fused_mcp"]
+
+[tool.setuptools.package-dir]
+iflow_mcp_fusedio_fused_mcp = "."
 
 [tool.setuptools.package-data]
-"*" = ["*.txt", "*.md", "*.json"]
+"*" = ["*.py", "*.txt", "*.md", "*.json", "agents.json"]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["test_*.py", ".*"]

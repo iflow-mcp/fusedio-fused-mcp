@@ -1,17 +1,3 @@
-Metadata-Version: 2.4
-Name: iflow-mcp_fusedio_fused-mcp
-Version: 0.1.2
-Summary: Fused MCP: Setting up MCP Servers for Data Scientists
-Requires-Python: >=3.11
-Description-Content-Type: text/markdown
-License-File: LICENSE
-Requires-Dist: anthropic>=0.49.0
-Requires-Dist: fused[all]>=1.15.0
-Requires-Dist: jupyterlab>=4.3.6
-Requires-Dist: mcp[cli]>=1.4.1
-Requires-Dist: python-dotenv>=1.0.1
-Dynamic: license-file
-
 <h1 align="center">
    Fused MCP Agents: Setting up MCP Servers for Data
 </h1>

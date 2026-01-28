@@ -1,0 +1,1 @@
+{"serverConfig": "{\"mcpServers\":{\"fused-mcp\":{\"command\":\"python\",\"args\":[\"/app/auto-mcp-upload/data/1809/main.py\",\"--agent\",\"get_current_time\",\"--runtime\",\"local\"],\"env\":{\"PYTHONPATH\":\"/app/auto-mcp-upload/data/1809:/app/auto-mcp-upload/data/1809/.venv/lib/python3.11/site-packages\"},\"values\":{}}}}"}

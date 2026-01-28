@@ -1,2 +1,2 @@
 [console_scripts]
-iflow-mcp-fusedio-fused-mcp = main:main
+iflow-mcp-fusedio-fused-mcp = iflow_mcp_fusedio_fused_mcp.main:main

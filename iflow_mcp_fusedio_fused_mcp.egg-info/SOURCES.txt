@@ -1,6 +1,16 @@
 LICENSE
 README.md
 pyproject.toml
+setup.py
+./README.md
+./agents.json
+./client.py
+./language.json
+./main.py
+./push_info.json
+./server_config.json
+./setup.py
+./test_stdio.py
 iflow_mcp_fusedio_fused_mcp.egg-info/PKG-INFO
 iflow_mcp_fusedio_fused_mcp.egg-info/SOURCES.txt
 iflow_mcp_fusedio_fused_mcp.egg-info/dependency_links.txt
